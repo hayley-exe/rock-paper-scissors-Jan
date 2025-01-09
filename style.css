@@ -7,7 +7,9 @@
 }
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #ffcf1b, #ff8b1b);
+  background-image: url(imgs/pinkbg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .container {
   width: 45%;
