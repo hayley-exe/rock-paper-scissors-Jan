@@ -75,3 +75,7 @@ body {
 span {
   font-weight: 600;
 }
+.board {
+  text-align: center;
+  margin: 50px;
+}
