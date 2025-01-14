@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Title</title>
+    <title>Rock Paper Scissors</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -17,34 +17,29 @@
 
     <main></main>
     <div class="board">
-        <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
-    </div>
+        <h1><span id="user_score_display">0</span> to <span id="computer_score_display">0</span></h1>
     </div>
     <div class="container">
         <div class="scores">
-            <p>Computer :
-                <span id="computer_score">0</span>
-            </p>
-            <p>
-                You :
-                <span id="user_score">0</span>
-            </p>
+            <p>Computer: <span id="computer_score">0</span></p>
+            <p>You: <span id="user_score">0</span></p>
         </div>
         <div class="weapons">
-            <button onclick="checker('rock')">
-                <img class="h-100 img-fluid" src="imgs/rock.png">
+            <button onclick="playGame('rock')">
+                <img class="h-100 img-fluid" src="imgs/rock.png" alt="Rock">
             </button>
-            <button onclick="checker('paper')">
-                <img class="h-100 img-fluid" src="imgs/paper.png" </button>
-                <button onclick="checker('scissor')">
-                    <img class="h-100 img-fluid" src="imgs/scissor.png">
-                </button>
+            <button onclick="playGame('paper')">
+                <img class="h-100 img-fluid" src="imgs/paper.png" alt="Paper">
+            </button>
+            <button onclick="playGame('scissors')">
+                <img class="h-100 img-fluid" src="imgs/scissor.png" alt="Scissors">
+            </button>
         </div>
 
         <div class="details">
             <p id="user_choice">You chose:</p>
             <p id="comp_choice">Computer chose:</p>
-            <p id="result">result</p>
+            <p id="result">Result</p>
         </div>
     </div>
 
