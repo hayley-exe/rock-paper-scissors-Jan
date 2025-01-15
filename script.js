@@ -56,3 +56,10 @@ function updateScores() {
     document.getElementById("computer_score_display").innerHTML = computer_score;
     document.getElementById("user_score_display").innerHTML = user_score;
 }
+if (user_score == 5) {
+    //reset game/win screen
+    console.log('positivity caterpillar')
+}
+else if (computer_score == 5) {
+    //reset game/lose screen
+} 
