@@ -43,23 +43,39 @@ function playGame(input) {
             break;
     }
 
-    // Update both the scores section and the board section
     updateScores();
+
+    // Check if someone won the game (score reached 5)
+    if (user_score == 5) {
+        setTimeout(() => {
+            alert("You won the game! Congratulations!");
+            resetGame();
+        }, 500); // Delay to show win message
+    } else if (computer_score == 5) {
+        setTimeout(() => {
+            alert("Computer won the game. Better luck next time!");
+            resetGame();
+        }, 500); // Delay to show lose message
+    }
 }
 
 function updateScores() {
-    // Update the displayed scores in the .scores section
     document.getElementById("computer_score").innerHTML = computer_score;
     document.getElementById("user_score").innerHTML = user_score;
 
-    // Update the scores on the board (h1) as well
     document.getElementById("computer_score_display").innerHTML = computer_score;
     document.getElementById("user_score_display").innerHTML = user_score;
 }
-if (user_score == 5) {
-    //reset game/win screen
-    console.log('positivity caterpillar')
+
+function resetGame() {
+    // Reset both scores
+    computer_score = 0;
+    user_score = 0;
+
+    // Reset score displays
+    updateScores();
+
+    // Reset result display
+    result_ref.style.cssText = "background-color: #e5e5e5; color: #808080";
+    result_ref.innerHTML = "Game Reset! Choose again.";
 }
-else if (computer_score == 5) {
-    //reset game/lose screen
-} 
