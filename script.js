@@ -1,6 +1,8 @@
+let userName = prompt('What is your name?')
+
+
 let [computer_score, user_score] = [0, 0];
 let result_ref = document.getElementById("result");
-
 function getResult(userChoice, computerChoice) {
     if (userChoice === computerChoice) {
         return 'draw';
@@ -21,7 +23,7 @@ function playGame(input) {
     document.getElementById("comp_choice").innerHTML =
         `Computer chose <span> ${choices[num].toUpperCase()} </span>`;
     document.getElementById("user_choice").innerHTML =
-        `You chose <span> ${input.toUpperCase()} </span>`;
+        `${userName} chose <span> ${input.toUpperCase()} </span>`;
 
     const computer_choice = choices[num];
     const result = getResult(input, computer_choice);
@@ -48,18 +50,19 @@ function playGame(input) {
     // Check if someone won the game (score reached 5)
     if (user_score == 5) {
         setTimeout(() => {
-            alert("You won the game! Congratulations!");
+            alert(`${userName} won the game! Congratulations!`);
             resetGame();
         }, 500); // Delay to show win message
     } else if (computer_score == 5) {
         setTimeout(() => {
-            alert("Computer won the game. Better luck next time!");
+            alert(`Computer won the game. Better luck next time!`);
             resetGame();
         }, 500); // Delay to show lose message
     }
 }
 
 function updateScores() {
+    document.querySelector('#name').textContent = userName
     document.getElementById("computer_score").innerHTML = computer_score;
     document.getElementById("user_score").innerHTML = user_score;
 

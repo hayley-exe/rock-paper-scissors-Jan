@@ -22,8 +22,9 @@
     <div class="container">
         <div class="scores">
             <p>Computer: <span id="computer_score">0</span></p>
-            <p>You: <span id="user_score">0</span></p>
+            <p><span id="name"></span>: <span id="user_score">0</span></p>
         </div>
+
         <div class="weapons">
             <button onclick="playGame('rock')">
                 <img class="h-100 img-fluid" src="imgs/rock.png" alt="Rock">
@@ -37,7 +38,7 @@
         </div>
 
         <div class="details">
-            <p id="user_choice">You chose:</p>
+            <p id="user_choice"> chose:</p>
             <p id="comp_choice">Computer chose:</p>
             <p id="result">Result</p>
         </div>
